@@ -10,13 +10,13 @@ Interceptors can be used to intercept error requests and deal with them globally
 
 ##Installation
 
-```
+```javascript
 npm react-angular-http-resource
 ```
 
 ###HTTP Usage and options:
 
-```
+```javascript
 var HTTP = require('react-angular-http-resource').HTTP;
 
 // set up interceptors or set up default options at the main entrance point
@@ -34,7 +34,7 @@ HTTP.setOptions({
 
 ###Resource Usage:
 
-```
+```javascript
 var resource = require('react-angular-http-resource').resource;
 
 // set up interceptors or set up default options at the main entrance point
