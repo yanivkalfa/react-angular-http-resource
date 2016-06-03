@@ -41,7 +41,7 @@ var resource = require('react-angular-http-resource').resource;
 var Users = resource('http://domain.com/v1.0/users');
 
 // using the resource to fetch data.
-var res =  Users.get( function() {
-  console.log('eess', arguments);
+var res =  Users.get( function(data) {
+  console.log('data', data);
 });
 ```
