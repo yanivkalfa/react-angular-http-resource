@@ -37,10 +37,10 @@ HTTP.setOptions({
 ```javascript
 var resource = require('react-angular-http-resource').resource;
 
-// set up interceptors or set up default options at the main entrance point
-// this will be available throughout the app.
+// create a resource using "resource" factory.
 var Users = resource('http://domain.com/v1.0/users');
 
+// using the resource to fetch data.
 var res =  Users.get( function() {
   console.log('eess', arguments);
 });
