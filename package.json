@@ -1,6 +1,6 @@
 {
   "name": "react-angular-http-resource",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "description": "React restful and normal http request tools that was converted from angular's $http and $resource",
   "main": "./lib/index.js",
   "scripts": {
