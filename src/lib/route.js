@@ -7,7 +7,6 @@ import {
   encodeUriQuery
 } from './util';
 
-
 import { MEMBER_NAME_REGEX, DEFAULTS, PROTOCOL_AND_DOMAIN_REGEX } from './../config/constants';
 
 class Route {
@@ -16,7 +15,6 @@ class Route {
     this.defaults = extend({}, DEFAULTS, defaults);
     this.urlParams = {};
   }
-
 
   setUrlParams (config, params, actionUrl) {
 
@@ -38,6 +36,7 @@ class Route {
         };
       }
     });
+    
     url = url.replace(/\\:/g, ':');
     url = url.replace(PROTOCOL_AND_DOMAIN_REGEX, (match) => {
       protocolAndDomain = match;
@@ -67,19 +66,19 @@ class Route {
       }
     });
 
-    // strip trailing slashes and set the url (unless this behavior is specifically disabled)
+    // Strip trailing slashes and set the url (unless this behavior is specifically disabled)
     if (self.defaults.stripTrailingSlashes) {
       url = url.replace(/\/+$/, '') || '/';
     }
 
-    // then replace collapse `/.` if found in the last URL path segment before the query
+    // Then replace collapse `/.` if found in the last URL path segment before the query
     // E.g. `http://url.com/id./format?q=x` becomes `http://url.com/id.format?q=x`
     url = url.replace(/\/\.(?=\w+($|\?))/, '.');
     // replace escaped `/\.` with `/.`
     config.url = protocolAndDomain + url.replace(/\/\\\./, '/.');
 
 
-    // set params - delegate param encoding to $http
+    // Set params - delegate param encoding to $http
     forEach(params, (value, key) => {
       if (!self.urlParams[key]) {
         config.params = config.params || {};
