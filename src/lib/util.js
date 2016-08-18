@@ -2,7 +2,6 @@ import _ from 'lodash';
 
 import { MEMBER_NAME_REGEX } from './../config/constants';
 
-
 export const noop = _.noop;
 export const forEach = _.forEach;
 export const extend = _.assign;
