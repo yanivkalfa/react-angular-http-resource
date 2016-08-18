@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import HTTP from './http';
 
-
 import {
   noop,
   forEach,
@@ -41,7 +40,7 @@ export default function () {
       return data;
     };
 
-    forEach(actions, (action, name) =>{
+    forEach(actions, (action, name) => {
       var hasBody = /^(POST|PUT|PATCH)$/i.test(action.method);
 
       Resource[name] = (a1, a2, a3, a4) => {
@@ -106,7 +105,9 @@ export default function () {
           }
         });
 
-        if (hasBody) httpConfig.data = data;
+        if (hasBody) {
+          httpConfig.data = data;
+        }
         route.setUrlParams(httpConfig,
           extend({}, extractParams(data, action.params || {}, paramDefaults), params),
           action.url);
