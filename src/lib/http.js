@@ -11,7 +11,7 @@ let initInterceptors = {
   response: null
 };
 
-function HTTP(ignoreOptions){
+function HTTP(ignoreOptions) {
   return HTTP.getInstance(ignoreOptions);
 }
 
@@ -21,7 +21,7 @@ HTTP.setOptions = function (extendedDefaults) {
 
   if (options.interceptors) {
     let interceptors = options.interceptors;
-    if(interceptors.requestSuccess || interceptors.requestError){
+    if(interceptors.requestSuccess || interceptors.requestError) {
       let request = [];
       request.push(interceptors.requestSuccess || pass);
       request.push(interceptors.requestError || pass);
@@ -36,7 +36,7 @@ HTTP.setOptions = function (extendedDefaults) {
       }
     }
 
-    if(interceptors.responseSuccess || interceptors.responseError){
+    if(interceptors.responseSuccess || interceptors.responseError) {
       let response = [];
       response.push(interceptors.responseSuccess || pass);
       response.push(interceptors.responseError || pass);
@@ -60,7 +60,5 @@ HTTP.getOptions = function() {
 HTTP.getInstance = function(ignoreOptions) {
   return axios;
 };
-
-
 
 export default HTTP;
