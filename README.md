@@ -19,7 +19,7 @@ npm react-angular-http-resource
 ```javascript
 var HTTP = require('react-angular-http-resource').HTTP;
 
-// set up interceptors or set up default options at the main entrance point
+// Set up interceptors or set up default options at the main entrance point
 // this will be available throughout the app.
 HTTP.setOptions({
   interceptors: {
@@ -37,10 +37,10 @@ HTTP.setOptions({
 ```javascript
 var resource = require('react-angular-http-resource').resource;
 
-// create a resource using "resource" factory.
+// Create a resource using "resource" factory.
 var Users = resource('http://domain.com/v1.0/users');
 
-// using the resource to fetch data.
+// Using the resource to fetch data.
 var res =  Users.get( function(data) {
   console.log('data', data);
 });
