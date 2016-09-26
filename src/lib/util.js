@@ -8,7 +8,7 @@ export const extend = _.assign;
 export const copy = _.cloneDeep;
 export const isFunction = _.isFunction;
 
-export function pass (value){ return value }
+export function pass (value) { return value }
 
 export function prettyError(){
   throw new Error(Array.prototype.join.call(arguments,' '));
