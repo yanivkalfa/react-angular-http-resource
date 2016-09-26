@@ -147,7 +147,7 @@ export default function () {
           value = responseInterceptor(response);
           (success || noop)(value, response.headers);
           return value;
-        }, (response)=>{
+        }, (response)=> {
           (error || noop)(response);
           (responseErrorInterceptor || noop)(response);
           return Promise.reject(response);
