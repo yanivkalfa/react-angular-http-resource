@@ -10,7 +10,7 @@ export const isFunction = _.isFunction;
 
 export function pass (value) { return value }
 
-export function prettyError(){
+export function prettyError() {
   throw new Error(Array.prototype.join.call(arguments,' '));
 }
 
