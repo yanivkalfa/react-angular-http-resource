@@ -5,7 +5,7 @@ export const DEFAULTS = {
   // Default actions configuration
   actions: {
     'get': { method: 'GET' },
-    'save': {method: 'POST'},
+    'save': { method: 'POST' },
     'query': {method: 'GET', isArray: true},
     'remove': {method: 'DELETE'},
     'delete': {method: 'DELETE'}
