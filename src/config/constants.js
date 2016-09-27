@@ -7,7 +7,7 @@ export const DEFAULTS = {
     'get': { method: 'GET' },
     'save': { method: 'POST' },
     'query': { method: 'GET', isArray: true },
-    'remove': {method: 'DELETE'},
+    'remove': { method: 'DELETE' },
     'delete': {method: 'DELETE'}
   }
 };
